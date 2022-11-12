@@ -22,10 +22,6 @@ public class Movie extends AbstractEqualsAndHashCode{
     private Integer length;
     private String description;
     private Integer requiredAge;
-    @Getter(value = AccessLevel.NONE)
-    @ToString.Exclude
-    @ManyToMany(mappedBy = "movies", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Marathon> marathons;
 
     public Movie(Long id, String title, EMovieCategory category, Integer length, String description, Integer requiredAge) {
         super(id);
@@ -36,10 +32,7 @@ public class Movie extends AbstractEqualsAndHashCode{
         this.requiredAge = requiredAge;
     }
 
-    public List<Marathon> getMarathons() {
-        if (marathons == null) marathons = new ArrayList<>();
-        return marathons;
-    }
+
 
 
 }

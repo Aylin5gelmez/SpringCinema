@@ -22,7 +22,9 @@ The application allows you to:
 - REST API
 
 
-
-
-
 IDE: [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
+
+
+
+
